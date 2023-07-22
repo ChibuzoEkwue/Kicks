@@ -1,8 +1,11 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Products from "@/components/Products/Products";
 
 export default function Home() {
-  return (
-    <main>Welcome to kicks</main>
-  )
+	return (
+		<main>
+			<div className="container">
+				<Products />
+			</div>
+		</main>
+	);
 }
