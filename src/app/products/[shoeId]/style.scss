@@ -1,0 +1,109 @@
+@import "../../../varaibles";
+
+.productDetailCard {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	margin: 50px 0px;
+	padding: 10px 0px;
+
+	.left {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+
+		.mainImg {
+			width: 400px;
+			height: 440px;
+			position: relative;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+
+		.actions {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			button {
+				background-color: $color-white;
+				border: none;
+				padding: 20px;
+				border-radius: 40px;
+				color: $color-black;
+				&:disabled{
+					background-color: #e5e4ed;
+					cursor: not-allowed;
+				}
+			}
+		}
+	}
+	.right {
+		flex: 1;
+		background-color: $color-white;
+		height: 400px;
+		padding: 30px;
+		transition: all 0.2s ease-in-out;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		&:hover {
+			box-shadow: -3px 2px 15px 1px rgba(0, 0, 0, 0.75);
+			-webkit-box-shadow: -3px 2px 15px 1px rgba(0, 0, 0, 0.75);
+			-moz-box-shadow: -3px 2px 15px 1px rgba(0, 0, 0, 0.75);
+		}
+		.bp {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 50px;
+			.brand {
+				font-size: 0.9em;
+				padding: 10px 5px;
+				background-color: $color-gray;
+				border-radius: 10px;
+			}
+			.price {
+				color: $accent-color;
+				font-weight: 500;
+				font-size: 1.2em;
+			}
+		}
+
+		h1 {
+			font-size: 1.2em;
+			font-weight: 600;
+		}
+		.color {
+			font-size: 0.9em;
+		}
+		select {
+			width: 100px;
+			padding: 10px 5px;
+			&:focus {
+				outline: none;
+			}
+		}
+		.actions {
+			display: flex;
+			gap: 20px;
+			button {
+				width: 150px;
+				height: 50px;
+				padding: 10px 5px;
+				border: none;
+				border-radius: 10px;
+				&:nth-child(1) {
+					background-color: $color-gray;
+				}
+				&:nth-child(2) {
+					background-color: $accent-color;
+				}
+			}
+		}
+	}
+}
